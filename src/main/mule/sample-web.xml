@@ -10,6 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="sample-webFlow" doc:id="ecaa7ae2-2e5e-43a6-8fff-8d9916ea7457" >
 		<http:listener doc:name="Listener" doc:id="f4251ae6-c11e-4262-80c0-661470513239" config-ref="HTTP_Listener_config" path="/web"/>
 		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="634ab748-ec65-4408-bbe5-e0992a35f902" />
-		<logger level="INFO" doc:name="Logger" doc:id="2354589a-3394-4f36-bb13-eb5071c36838" message="#[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="2354589a-3394-4f36-bb13-eb5071c36838" message='#["this is sample" ++ payload]'/>
 	</flow>
 </mule>
